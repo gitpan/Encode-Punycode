@@ -1,38 +1,55 @@
+# $Id : $
+#
 package Encode::Punycode;
 
 use strict;
-our $VERSION = 0.02;
+use utf8;
+use warnings;
+
+require 5.006_000;
+
+our $VERSION = '0.99_20080913';
+$VERSION = eval $VERSION;
 
 require Encode;
 use base qw(Encode::Encoding);
 __PACKAGE__->Define('Punycode', 'punycode');
 
-require IDNA::Punycode;
+use Net::IDN::Punycode();
 
 sub encode {
-    my($obj, $str, $chk) = @_;
-    $str = IDNA::Punycode::encode_punycode($str);
-    $_[1] = '' if $chk;
-    return $str;
+  my($self, $string, $check) = @_;
+  $string = Net::IDN::Punycode::encode_punycode($string);
+  $_[1] = '' if $check;
+  return $string;
 }
 
 sub decode {
-    my($obj, $str, $chk) = @_;
-    $str = IDNA::Punycode::decode_punycode($str);
-    $_[1] = '' if $chk;
-    return $str;
+  my($self, $string, $check) = @_;
+  $string = Net::IDN::Punycode::decode_punycode($string);
+  $_[1] = '' if $check;
+  return $string;
+}
+
+sub mime_name {
+  return undef;
+};
+
+sub perlio_ok { 
+  return 0;
 }
 
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
-Encode::Punycode - Encode plugin for Punycode encodings
+Encode::Punycode - Encode plugin for Punycode (S<RFC 3492>)
 
 =head1 SYNOPSIS
 
-  use Encode::Punycode;
   use Encode;
 
   $unicode  = decode('Punycode', $punycode);
@@ -40,21 +57,29 @@ Encode::Punycode - Encode plugin for Punycode encodings
 
 =head1 DESCRIPTION
 
-Encode::Punycode is an Encode plugin, which allows you to encode
-Unicode strings into Punycode. Punycode is an efficient encoding
-(ACE) of Unicode for use with IDNA.
+Encode::Punycode is an Encode plugin, which implements the
+Punycode encoding.  Punycode is an instance of a more general
+algorithm called Bootstring, which allows strings composed from a
+small set of "basic" code points to uniquely represent any string
+of code points drawn from a larger set.  Punycode is Bootstring
+with particular parameter values appropriate for IDNA.
 
-=head1 AUTHOR
+Note that this module does not do any string preparation as
+specified by I<nameprep>/I<stringprep>. It does not do add any
+prefix or suffix, either.
 
-Tatsuhiko Miyagawa E<lt>miyagawa@bulknews.netE<gt>
+=head1 AUTHOR / LICENSE
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+Claus Färber E<lt>CFAERBER@cpan.orgE<gt>
+
+Previous versions written by Tatsuhiko Miyagawa E<lt>miyagawa@bulknews.netE<gt>
+
+This library is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-http://www.ietf.org/internet-drafts/draft-ietf-idn-punycode-01.txt
-
-L<IDNA::Punycode>
+L<Encode>, L<Net::IDN::Punycode>, 
+S<RFC 3492> L<http://www.ietf.org/rfc/rfc3492.txt>
 
 =cut

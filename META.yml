@@ -1,0 +1,15 @@
+--- #YAML:1.0
+name:                Encode-Punycode
+version:             0.99_20080913
+abstract:            Encode plugin for Punycode (RFC 3492)
+license:             perl
+author:              
+    - Claus Färber <CFAERBER@cpan.org>
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:     
+    Encode:                        1
+    Net::IDN::Punycode:            0.99
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
