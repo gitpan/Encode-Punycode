@@ -1,9 +1,8 @@
-# $Id: vectors.t 73 2007-10-12 15:29:44Z cfaerber $
-
 use strict;
 use utf8;
 
 use Test::More;
+use Test::NoWarnings;
 
 use Encode;
 use Encode::Punycode;
@@ -103,7 +102,7 @@ our @idna = (
     "b1abfaaepdrnnbgefbadotcwatmq2g4l", 0, 0, 1, 1 ],
    );
 
-plan tests => ($#idna+1)*2;
+plan tests => ($#idna+1)*2 + 1;
 
 
 foreach my $test (@idna) 
