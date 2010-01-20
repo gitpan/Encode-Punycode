@@ -9,7 +9,7 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Encode/Punycode.pm',
           'PREREQ_PM' => {
                            'Test::More' => 0,
-                           'Net::IDN::Punycode' => '0.99',
+                           'Net::IDN::Punycode' => 1,
                            'Test::NoWarnings' => 0,
                            'Encode' => 1
                          }

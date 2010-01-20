@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.61.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,21 +14,20 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 67f93acc9e270d3ba3828f542a0a61d2e1a46df7 Build.PL
+SHA1 684fed788e09fbde3a150f11fb65a820a99de9c0 Build.PL
 SHA1 172e0de28e9be3b6a4b681ff871898c75529e9b1 Changes
-SHA1 5e8892b211d2e08c1b98d3a033b4d8439158339e LICENSE
-SHA1 dfe8ee8fc601a03513ee3787aa3bc4c85c398ca3 MANIFEST
-SHA1 9b4bb5fb5fc0637182cd0b954cc95318fbeecc9d META.yml
-SHA1 7208167656134b087c56fe507cc83b4ca45aba15 Makefile.PL
+SHA1 9b37c74ac55bf4a1d347a873f9936ca24cab4f3b LICENSE
+SHA1 283e1a54dc5aa942b6f4b4a68ae707e7fba5ef5e MANIFEST
+SHA1 f7523d58acbf495bba0d9ed086f6e81c65a54204 META.yml
+SHA1 636da1e4de459be81523c6ea71664ab8b2d0b78b Makefile.PL
 SHA1 5c502498877bb16ba4cf8d3ab16a8a5a9f9d0dc9 README
-SHA1 d8412ca0a2a18b0b3493885581f15492357dc807 lib/Encode/Punycode.pm
+SHA1 ce2ea13cca62887a0bdc465f765843edf77ca4bf lib/Encode/Punycode.pm
 SHA1 ac244723239acf950f85d96e1fdb22da8fb494e8 t/00use.t
-SHA1 fb6e50146e0839b85c955fdd5fd23e292232ffd0 t/10pod.t
 SHA1 720c8c5b030148b9d2c4f14b665e834d9740777b t/vectors.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAksyjt0ACgkQSKUOY2OWgPAzYQCgu0oRoXWjzvbabq/kxfJmXOPH
-75wAnjNVOtb431hUL3BbnKUQJN9F8M2B
-=ZY4B
+iEYEARECAAYFAktW6pQACgkQSKUOY2OWgPAbEACffN9uIjx7MKKSGIGjRI44GUYR
+AowAoKxsB66EjIp0iVNKnoHW25h7EL9s
+=G/+L
 -----END PGP SIGNATURE-----

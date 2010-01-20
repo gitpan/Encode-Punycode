@@ -1,6 +1,6 @@
 ---
 name: Encode-Punycode
-version: 0.99_20091223
+version: 1.000
 author:
   - 'Claus Färber <CFAERBER@cpan.org>'
 abstract: Encode plugin for Punycode (S<RFC 3492>)
@@ -12,13 +12,13 @@ build_requires:
   Test::NoWarnings: 0
 requires:
   Encode: 1
-  Net::IDN::Punycode: 0.99
+  Net::IDN::Punycode: 1
 configure_requires:
   Module::Build: 0.35
 provides:
   Encode::Punycode:
     file: lib/Encode/Punycode.pm
-    version: 0.99_20091223
+    version: 1.000
 no_index:
   directory: eg
 generated_by: Module::Build version 0.35
