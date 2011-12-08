@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.61.
+signed via the Module::Signature module, version 0.66.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,20 +14,22 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 684fed788e09fbde3a150f11fb65a820a99de9c0 Build.PL
-SHA1 172e0de28e9be3b6a4b681ff871898c75529e9b1 Changes
-SHA1 9b37c74ac55bf4a1d347a873f9936ca24cab4f3b LICENSE
-SHA1 283e1a54dc5aa942b6f4b4a68ae707e7fba5ef5e MANIFEST
-SHA1 f7523d58acbf495bba0d9ed086f6e81c65a54204 META.yml
-SHA1 636da1e4de459be81523c6ea71664ab8b2d0b78b Makefile.PL
+SHA1 115201fa3e856c73f3c4c3dccdd641f8776dd50a Build.PL
+SHA1 a47ebfc0fc6137bd240f038c0ab26474413c91c9 Changes
+SHA1 db6132facac62a3a2dcc70d64533ba437679c966 LICENSE
+SHA1 d492ee85fdb7d87b2719904953b78af0e2d0d1fb MANIFEST
+SHA1 6c8da4c1544bf3de42296527f7efbcf690341ca6 META.json
+SHA1 872e1665d8d3b7558f5aa3d44b400450e66d579f META.yml
+SHA1 66cc0f444b150547bea5898e11b7678079d393f7 Makefile.PL
 SHA1 5c502498877bb16ba4cf8d3ab16a8a5a9f9d0dc9 README
-SHA1 ce2ea13cca62887a0bdc465f765843edf77ca4bf lib/Encode/Punycode.pm
+SHA1 35125743c80e4c18697bdb9b15cbea1e1157810b lib/Encode/Punycode.pm
 SHA1 ac244723239acf950f85d96e1fdb22da8fb494e8 t/00use.t
+SHA1 fb6e50146e0839b85c955fdd5fd23e292232ffd0 t/10pod.t
 SHA1 720c8c5b030148b9d2c4f14b665e834d9740777b t/vectors.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.10 (Darwin)
+Version: GnuPG v1.4.11 (Darwin)
 
-iEYEARECAAYFAktW6pQACgkQSKUOY2OWgPAbEACffN9uIjx7MKKSGIGjRI44GUYR
-AowAoKxsB66EjIp0iVNKnoHW25h7EL9s
-=G/+L
+iEYEARECAAYFAk7hKGMACgkQSKUOY2OWgPAh+wCdGCzZIlUTOOweyLFkANrciePw
+BBMAoL9QdUvJQ3dKshmSDj7Hw6ivQel7
+=02Ps
 -----END PGP SIGNATURE-----

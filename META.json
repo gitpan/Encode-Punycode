@@ -1,0 +1,53 @@
+{
+   "abstract" : "Encode plugin for Punycode (S<RFC 3492>)",
+   "author" : [
+      "Claus Färber <CFAERBER@cpan.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.112621",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Encode-Punycode",
+   "no_index" : {
+      "directory" : [
+         "eg"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : 0,
+            "Test::NoWarnings" : 0
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.38"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Encode" : "1",
+            "Net::IDN::Punycode" : "1"
+         }
+      }
+   },
+   "provides" : {
+      "Encode::Punycode" : {
+         "file" : "lib/Encode/Punycode.pm",
+         "version" : "1.001"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "1.001"
+}
